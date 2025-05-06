@@ -12,7 +12,6 @@ int main(void){
     nt main(void) {
         int letras_nombre, letras_apellido;
         char *nombre, *apellido;
-    
         printf("¿Cuántas letras tiene su nombre? ");
         scanf("%d", &letras_nombre);
     
