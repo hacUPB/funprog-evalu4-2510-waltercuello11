@@ -39,7 +39,7 @@ char* leerArchivo(const char* nombre) {
     return buffer;
 }
 
-}
+
 Estadisticas calcularEstadisticas(const char* texto) {
     Estadisticas est = {0, 0, 0, 0};
     int enPalabra = 0;
@@ -61,6 +61,12 @@ Estadisticas calcularEstadisticas(const char* texto) {
             enPalabra = 1;
         }
     }
+if (texto[0] != '\0' && texto[strlen(texto) - 1] != '\n')
+        est.lineas++;
+
+    return est;
+}
+
 
 
 
