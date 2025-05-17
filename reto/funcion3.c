@@ -1,27 +1,13 @@
-Estadisticas calcularEstadisticas(const char* texto) {
-    Estadisticas est = {0, 0, 0, 0};
-    int enPalabra = 0;
+// Cuenta la cantidad de cada vocal (minúscula o mayúscula) sin usar tolower().
+void contarVocales(const char* texto, int* a, int* e, int* i, int* o, int* u) {
+    *a = *e = *i = *o = *u = 0;
 
-    for (int i = 0; texto[i] != '\0'; i++) {
-        char c = texto[i];
-
-        if (c != '\n')
-            est.caracteres++;
-
-        if (c == ' ') {
-            est.espacios++;
-            enPalabra = 0;
-        } else if (c == '\n') {
-            est.lineas++;
-            enPalabra = 0;
-        } else if (!enPalabra) {
-            est.palabras++;
-            enPalabra = 1;
-        }
+    for (int j = 0; texto[j] != '\0'; j++) {
+        char c = texto[j];
+        if (c == 'a' || c == 'A') (*a)++;
+        else if (c == 'e' || c == 'E') (*e)++;
+        else if (c == 'i' || c == 'I') (*i)++;
+        else if (c == 'o' || c == 'O') (*o)++;
+        else if (c == 'u' || c == 'U') (*u)++;
     }
-
-    if (texto[0] != '\0' && texto[strlen(texto) - 1] != '\n')
-        est.lineas++;
-
-    return est;
 }
