@@ -1,6 +1,6 @@
-#include <stdio.h>      // Para funciones de entrada/salida como printf, scanf, fopen, etc.
-#include <stdlib.h>     // Para funciones de gestión de memoria dinámica como malloc, free.
-#include <string.h>     // Para funciones de manejo de cadenas como strlen, strcpy, strstr.
+#include <stdio.h>      
+#include <stdlib.h>     
+#include <string.h>     
 
 #define MAX_FILENAME 256  // Tamaño máximo para nombres de archivo.
 #define MAX_PALABRA 100   // Tamaño máximo para palabras a buscar/reemplazar.
